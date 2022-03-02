@@ -24,7 +24,7 @@ helloWorld()
 */
 
 //CODE HERE
-
+const jsNinja = () => 'I am a JavaScript ninja!'
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -34,8 +34,11 @@ helloWorld()
 */
 
 //CODE HERE
+const printName = (name) => {
+console.log(name)
+}
 
-
+printName('Cole')
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called greeting that
@@ -48,7 +51,12 @@ helloWorld()
 */
 
 //CODE HERE
+const greeting = (name) => {
+  name = String(name)
+  console.log(`Hello, ${name}`)
+}
 
+greeting('Jake')
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -62,7 +70,13 @@ helloWorld()
 */
 
 //CODE HERE
-
+const compareNums = (num1, num2) => {
+  if (num1 > num2) {
+    return num1 
+  } else {
+    return num2 
+  }
+}
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -73,8 +87,14 @@ helloWorld()
 */
 
 //CODE HERE
+const add = (num1, num2) => {
+  num1 = +num1
+  num2 = +num2
+  return num1 + num2 
+}
 
-
+const sum = add(50, 50)
+console.log(`${sum}`)
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -88,7 +108,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
+"expression"
 
 
 
@@ -103,7 +123,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+"arrow"
 // declaration
 // expression
 
@@ -114,7 +134,7 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => `${str.toUpperCase()}`
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -128,7 +148,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+"declaration"
 // expression
 
 
@@ -142,8 +162,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+const nameCheck = (name) => {
+  if (name === "Steven") {
+    return 'What up Steven'
+  } else if (name === "Bryan") {
+    return "Hey Bryan"
+  } else {
+    return `Cool name ${name}`
+  }
+}
 
-
+const nameGreeting = nameCheck('Steven')
+console.log(`${nameGreeting}`)
 ////////////////// PROBLEM 11 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -155,8 +185,20 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+const faveColorFinder = color => {
+  if (color === "red") {
+    return "red is a great color"
+  } else if (color === "green") {
+    return "green is a solid color"
+  } else if (color === 'black') {
+    return "edgy"
+  } else {
+    return "you need to come up with a fav color"
+  }
+}
 
-
+const colorRating = faveColorFinder('green')
+console.log(`${colorRating}`)
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -166,8 +208,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const printAllNames = names => {
+  for (let i = 0; i < names.length; i++) {
+    console.log(names[i])
+  }
+}
 
-
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -177,8 +224,16 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const thatsOdd = num => {
+  if (num % 2 === 0) {
+    return "thats not odd"
+  } else {
+    return "that is odd"
+  }
+}
 
-
+const oddChecker = thatsOdd(9)
+console.log(`${oddChecker}`)
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -190,8 +245,16 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+// const bestMovie = title => {
+//   if (title === "Sharknado") {
 
+//   }
+//   return title + " is the best movie ever!"
+// }
 
+const bestMovie = title => `${title} is the best movie ever`
+const sharkNado = bestMovie('Sharknado')
+console.log(`${sharkNado}`)
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 /* 
@@ -204,8 +267,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+const bigOrSmall = (arr) => {
+  let answer = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answer.push('big')
+    } else {
+      answer.push('small')
+    }
+  }
+  return answer
+}
 
-
+const arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(`${arrayEvaluator}`)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -215,8 +290,17 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+const theEliminator = (contestants, loser) => {
+  for (let i = 0; i < contestants.length; i++) {
+    if (contestants[i] === loser) {
+      contestants.splice(i, 1)
+    }
+  }
+  return contestants
+}
 
-
+const updatedContestants = theEliminator(contestants, loser)
+console.log(`${updatedContestants}`)
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
 /*
@@ -225,8 +309,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+const makeUppercase = str => {
+  console.log(str.toUpperCase())
+}
 
-
+makeUppercase(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -237,7 +324,14 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
-
+const emailCheck = email => {
+  email = String(email).trim()
+  if (email.includes('@')) {
+    return "email verified"
+  } else {
+    return " must provide a valid email address"
+  }
+}
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -245,16 +339,30 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+const frogChoco = gold => {
+  return gold / 3 
+} 
 
-
+const totalFrogs = frogChoco(30)
+console.log(`${totalFrogs}`)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 //CODE HERE
+const frogChoco2 = gold => {
+  if (gold % 3 === 0) {
+    return gold / 3 
+  } else if ((gold - 1) % 3 === 0) {
+    return (gold - 1) / 3
+  } else {
+    return (gold - 2) / 3
+  }
+}
 
-
+const totalFrogs2 = frogChoco2(4)
+console.log(`${totalFrogs2}`)
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -262,8 +370,20 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+const arrAscend = arr => {
+  let comparisonValue = arr[0]
+  for( let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false 
+    } else {
+      comparisonValue = arr[i]
+    }
+  }
+  return true 
+}
 
-
+const arrayIsAscending = arrAscend(sampleArray)
+console.log(`${arrayIsAscending}`)
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
